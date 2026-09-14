@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Fest 2026</title>
+    
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <form id="formpendaftaran">
+        <label>Nama Lengkap</label>
+        <input type="text" id="Nama">
+        <small id="errorNama"></small>
+
+        <label>Email</label>
+        <input type="email" id="Email">
+        <small id="errorEmail"></small>
+
+        <label>Kelas</label>
+        <select id="Kelas">
+            <option value="Kelas">Pilih Kelas</option>
+            <option value="X">X</option>
+            <option value="X PPLG1">X PPLG1</option>
+            <option value="X PPLG2">X PPLG2</option>
+            <option value="X PPLG3">X PPLG3</option>
+            <option value="X TJKT1">X TJKT1</option>
+            <option value="X TJKT2">X TJKT2</option>
+            <option value="X TJKT3">X TJKT3</option>
+            <option value="X TJKT4">X TJKT4</option>
+            <option value="X BP">X BP</option>
+
+            <option value="XI">XI</option>
+            <option value="XI RPL1">XI RPL1</option>
+            <option value="XI RPL2">XI RPL2</option>
+            <option value="XI RPL3">XI RPL3</option>
+            <option value="XI TKJ1">XI TKJ1</option>
+            <option value="XI TKJ2">XI TKJ2</option>
+            <option value="XI TKJ3">XI TKJ3</option>
+            <option value="XI TJA">XI TJA</option>
+            <option value="XI PF">XI PF</option>
+
+            <option value="XII">XII</option>
+            <option value="XII RPL1">XII RPL1</option>
+            <option value="XII RPL2">XII RPL2</option>
+            <option value="XII RPL3">XII RPL3</option>
+            <option value="XII TKJ1">XII TKJ1</option>
+            <option value="XII TKJ2">XII TKJ2</option>
+            <option value="XII TKJ3">XII TKJ3</option>
+            <option value="XII TJA1">XII TJA1</option>
+            <option value="XII TJA2">XII TJA2</option>
+            <option value="XII PF1">XII PF1</option>
+            <option value="XII PF2">XII PF2</option>
+        </select>
+        
+        <label>Jurusan</label>
+        <select id="Jurusan">
+            <option value="RPL">RPL</option>
+            <option value="TKJ">TKJ</option>
+            <option value="TJA">TJA</option>
+            <option value="PF">PF</option>
+        </select>
+        <small id="errorJurusan"></small>
+
+        <label>ExtraKurikuler</label>
+        <input type="text" id="ExtraKurikuler">
+        <small id="errorExtraKurikuler"></small>
+
+        <label class="checkbox-row">
+            <input type="checkbox" id="syarat">
+            <span>saya menyetujui syarat &amp; ketentuan</span>
+        </label>
+
+        <button type="submit" id="btnDaftar" disabled>Daftar Sekarang
+        </button>
+
+    </form>
+    <div id="hasil"></div>
+
+    
+</body>
+</html>
