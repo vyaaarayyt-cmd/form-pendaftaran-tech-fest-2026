@@ -1,19 +1,21 @@
 const form = document.getElementById("FormPendaftaran");
 
-const nama = document.getElementById("naama");
+const nama = document.getElementById("nama");
 const email = document.getElementById("email");
 const kelas = document.getElementById("kelas");
 const jurusan = document.getElementById("jurusan");
-const extrakurikuler = document.getElementById("extraeurikuler");
+const extrakurikuler = document.getElementById("extrakurikuler");
 const syarat = document.getElementById("syarat");
 const btnDaftar = document.getElementById("btnDaftar");
 const hasil = document.getElementById("hasil");
 
 // mengatur tombol daftar agar aktif
 // jika syarat dan ketentuan dicentang
-syarat.addEventListener("change",function () {
-    btnDaftar.disabled = !syarat.checked;
-});
+function cekForm() {
+    btnDaftar.disabled = !form.checkValidity();
+}
+form.addEventListener("input", cekForm);
+form.addEventListener("change", cekForm);
 
 // mencegah halaman melakukan reload 
 // saat form disubmit
@@ -28,23 +30,25 @@ form.addEventListener("submit", function(event) {
     //mengambil nilai dari form
     const namaValue= nama.value.trim();
     const emailValue= email.value.trim();
-    const kelasValue= kelas.value.trim();
-    const jurusanValue= jurusan.value.trim();
+    const kelasValue= kelas.value;
+    const jurusanValue= jurusan.value;
     const extrakurikulerValue= extrakurikuler.value.trim();
 
     //validasi nama
     if (namaValue === "" || namaValue.length < 3) {
         hasil.innerHTML = `
-        <div class="error">nama Lengkap harus diisi dan minimal 3 karakter. </div>
+        <div class="error">nama Lengkap harus diisi dan minimal 3 karakter.
+        </div>
         `;
-        nama.style.borderColor ="red";
+        nama.style.borderColor="red";
         return;
     }
 
     //validasi email
     if (!emailValue.includes("@")) {
         hasil.innerHTML=`
-        <div class="error"> Email harus mengandung karakter @.</div>
+        <div class="error"> Email harus mengandung karakter @.
+        </div>
         `;
         email.style.borderColor ="red";
         return;
@@ -66,7 +70,7 @@ form.addEventListener("submit", function(event) {
     <p><strong>email:</strong> ${emailValue}</p>
     <p><strong>kelas:</strong> ${kelasValue}</p>
     <p><strong>jurusan:</strong> ${jurusanValue}</p>
-    <p><strong>ExtraKurikuler:</strong> ${ExtraKurikulerValue}</p>
+    <p><strong>extrakurikuler:</strong> ${extrakurikulerValue}</p>
     </div>
     `;
 
