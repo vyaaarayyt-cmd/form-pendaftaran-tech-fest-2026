@@ -92,3 +92,21 @@ input[type="submit"]:hover {
     height: 16px;
     margin: 0;
 }
+
+#hasil {
+    margin-top: 20px;
+}
+.sukses {
+    padding: 15px;
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+    border-radius: 10px;
+    color: #155724;
+    text-align: center;
+}
+.sukses h3 {
+    margin: 0 0 8px;
+}
+.sukses p {
+    margin: 0;
+}
