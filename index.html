@@ -3,82 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Fest 2026</title>
-    
+    <title>form pendaftaran tech fest 2026</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
-    <form id="FormPendaftaran">
-        <label>Nama lengkap</label>
-        <input type="text" id="nama" required>
-        <small id="errornama"></small>
+
+    <div class="container">
+        <h1>Form Pendaftaran Tech Fest 2026</h1>
+        <div id="hasil"></div>
+
+        <form id="formPendaftaran" novalidate>
+
+        <div class="form-group">
+                <label for="nama">Nama:</label>
         
-
-        <label>Email</label>
-        <input type="email" id="email"required>
-        <small id="erroremail"></small>
-
-        <label>Kelas</label>
-        <select id="kelas"required>
-            <option value="">Pilih Kelas</option>
-            <option value="X">X</option>
-            <option value="X PPLG1">X PPLG1</option>
-            <option value="X PPLG2">X PPLG2</option>
-            <option value="X PPLG3">X PPLG3</option>
-            <option value="X TJKT1">X TJKT1</option>
-            <option value="X TJKT2">X TJKT2</option>
-            <option value="X TJKT3">X TJKT3</option>
-            <option value="X TJKT4">X TJKT4</option>
-            <option value="X BP">X BP</option>
-
-            <option value="XI">XI</option>
-            <option value="XI RPL1">XI RPL1</option>
-            <option value="XI RPL2">XI RPL2</option>
-            <option value="XI RPL3">XI RPL3</option>
-            <option value="XI TKJ1">XI TKJ1</option>
-            <option value="XI TKJ2">XI TKJ2</option>
-            <option value="XI TKJ3">XI TKJ3</option>
-            <option value="XI TJA">XI TJA</option>
-            <option value="XI PF">XI PF</option>
-
-            <option value="XII">XII</option>
-            <option value="XII RPL1">XII RPL1</option>
-            <option value="XII RPL2">XII RPL2</option>
-            <option value="XII RPL3">XII RPL3</option>
-            <option value="XII TKJ1">XII TKJ1</option>
-            <option value="XII TKJ2">XII TKJ2</option>
-            <option value="XII TKJ3">XII TKJ3</option>
-            <option value="XII TJA1">XII TJA1</option>
-            <option value="XII TJA2">XII TJA2</option>
-            <option value="XII PF1">XII PF1</option>
-            <option value="XII PF2">XII PF2</option>
-        </select>
+            <div class="input-area">
+                <input type="text" id="nama" placeholder="Masukan Nama Lengkap">
+                <small id="errornama" class="error"></small>
+            </div>
+        </div>
         
-        <label>Jurusan</label>
-        <select id="jurusan" required>
-            <option value="">Pilih Jurusan</option>
-            <option value="RPL">RPL</option>
-            <option value="TKJ">TKJ</option>
-            <option value="TJA">TJA</option>
-            <option value="PF">PF</option>
+        <div class="form-group">
+                <label for="Email">Email:</label>
+            
+            <div class="input-area">
+                <input type="email" id="email" placeholder="Masukan Email">
+                <small id="erroremail" class="error"></small>
+            </div>
+        </div>
+         
+    <div class="form-group">
+            <label for="kelas">kelas:</label>
+
+            <div class="input-area">
+                <select name="kelas" id="kelas">
+        <option value="" selected disabled>Pilih Kelas</option>
+        <option value="X PPLG 1"> X PPLG 1 </option>
+        <option value="X PPLG 2"> X PPLG 2 </option>
+        <option value="X PPLG 3"> X PPLG 3 </option>
+        <option value="X TJKT 1"> X TJKT 1 </option>
+        <option value="X TJKT 2"> X TJKT 2 </option>
+        <option value="X TJKT 3"> X TJKT 3 </option>
+        <option value="X TJKT 4"> X TJKT 4 </option>
+        <option value="X BP"> X BP </option>
+
+        <option value="XI RPL 1"> XI RPL 1 </option>
+        <option value="XI RPL 2"> XI RPL 2 </option>
+        <option value="XI RPL 3"> XI RPL 3 </option>
+        <option value="XI TKJ 1"> XI TKJ 1 </option>
+        <option value="XI TKJ 2"> XI TKJ 2 </option>
+        <option value="XI TKJ 3"> XI TKJ 3 </option>
+        <option value="XI TJA"> XI TJA </option>
+        <option value="PF"> XI PF </option>
+
+        <option value="XII RPL 1"> XII RPL 1 </option>
+        <option value="XII RPL 2"> XII RPL 2 </option>
+        <option value="XII RPL 3"> XII RPL 3 </option>
+        <option value="XII TKJ 1"> XII TKJ 1 </option>
+        <option value="XII TKJ 2"> XII TKJ 2 </option>
+        <option value="XII TKJ 3"> XII TKJ 3 </option>
+        <option value="XII TJA 1"> XII TJA 1 </option>
+        <option value="XII TJA 2"> XII TJA 2 </option>
+        <option value="XII PF 1"> XII PF 1 </option>
+        <option value="XII PF 2"> XII PF 2 </option>
         </select>
-        <small id="errorjurusan"></small>
+        <small id="errorkelas" class="error"></small>
+            </div>
+    </div>
 
-        <label>ExtraKurikuler</label>
-        <input type="text" id="extrakurikuler"required>
-        <small id="errorextrakurikuler"></small>
+    <div class="form-group">
+        <label for="jurusan">Jurusan:</label>
 
-        <label class="checkbox-row">
-            <input type="checkbox" id="syarat" required>
-            <span>saya menyetujui syarat & ketentuan</span>
-        </label>
+        <div class="input-area">
+        <select name="jurusan" id="jurusan">
+        <option value="" selected disabled>Pilih Jurusan</option>
+        <option value="RPL">RPL</option>
+        <option value="TJA">TJA</option>
+        <option value="TKJ">TKJ</option>
+        <option value="PF">PF</option>
+        </select>
+        <small id="errorjurusan" class="error"></small>
+        </div>
+    </div>
 
-        <button type="submit" id="btnDaftar"disabled>Daftar Sekarang</button>
-    </form>
-    <div id="hasil"></div>
-    <script src="JS/script.js"></script>
+    <div class="form-group">
+        <label for="Kegiatan">Kegiatan:</label>
 
+        <div class="input-area">
+        <input type="text" id="kegiatan" placeholder="Masukan Kegiatan">
+        <small id="errorkegiatan" class="error"></small>
+        </div>
+    </div>
 
+    <div class="form-group">
+        <label for="Status">Status:</label>
+
+        <div class="input-area">
+            <select id="status">
+                <option value="" selected disabled>Pilih Status</option>
+                <option value="pending">Pending</option>
+                <option value="approve">Approve</option>
+                <option value="reject">Reject</option>
+            </select>
+            <small id="errorstatus" class="error"></small>
+        </div>
+    </div>
     
+     <div class="checkbox">
+        <input type="checkbox" id="syarat"> 
+        <label for="Syarat">saya menyetujui syarat dan ketentuan</label>
+    </div>
+
+    <div class="button-area">
+        <button type="submit" id="btndaftar" disabled>Daftar Sekarang</button>
+    </div>
+
+        </form>
+    </div>
+    <script src="JS/script.js"></script>
 </body>
 </html>
